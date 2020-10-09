@@ -199,6 +199,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94124097}
   m_CullTransparentMesh: 0
+--- !u!1 &321232823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321232825}
+  - component: {fileID: 321232824}
+  m_Layer: 0
+  m_Name: Chislo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &321232824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321232823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b22dc7ced946243801e6face432102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Field: {fileID: 954057390}
+  nim: 0
+--- !u!4 &321232825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321232823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.16, y: -0.71000004, z: 72.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493730743
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +335,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493730743}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4b22dc7ced946243801e6face432102, type: 3}
   m_Name: 
@@ -664,6 +709,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f: 0
+  first: 
+  label1: 
+  second: 
+  label2: 
+  third: 
+  label3: 
+  fourth: 
+  label4: 
+  fifth: 
+  label5: 
+  sixth: 
+  label6: 
+  seventh: 
+  label7: 
+  eighth: 
+  label8: 
+  ninth: 
+  label9: 
+  tenth: 
+  label10: 
+  eleventh: 
+  label11: 
+  tvelvth: 
+  label12: 
+  Label: {fileID: 0}
+  Name: {fileID: 0}
 --- !u!135 &1370619584
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -845,6 +916,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f: 0
+  first: 
+  label1: 
+  second: 
+  label2: 
+  third: 
+  label3: 
+  fourth: 
+  label4: 
+  fifth: 
+  label5: 
+  sixth: 
+  label6: 
+  seventh: 
+  label7: 
+  eighth: 
+  label8: 
+  ninth: 
+  label9: 
+  tenth: 
+  label10: 
+  eleventh: 
+  label11: 
+  tvelvth: 
+  label12: 
+  Label: {fileID: 0}
+  Name: {fileID: 0}
 --- !u!1 &1539340402
 GameObject:
   m_ObjectHideFlags: 0

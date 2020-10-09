@@ -9,13 +9,24 @@ public class Error1 : MonoBehaviour
 {
 
     public InputField Field;
-    
+    public static int check;
     public int nim;
     
+
+    void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        
+    }
     void Update()
     {
-    
-        nim = Convert.ToInt32(Field.text);
+        if (Field.text != ""){
+            nim = Convert.ToInt32(Field.text);
+            check = nim;
+        }
+        
+        
+        
     }
     
 }
