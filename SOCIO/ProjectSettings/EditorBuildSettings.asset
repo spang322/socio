@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Play/GameFirst/PlayFirst.unity
     guid: 87e99f18c754e5c40967990202c0070b
+  - enabled: 1
+    path: Assets/Scenes/Menu/Play/GameFirst/Scene1.unity
+    guid: 543b34a1f8ce5444ebf3f5a19886f764
+  - enabled: 1
+    path: Assets/Scenes/Menu/Play/GameFirst/Scene2.unity
+    guid: 2140631debc47824e89e632427870cbb
   m_configObjects: {}

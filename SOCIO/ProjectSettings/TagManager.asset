@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Audio
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  - 11
   layers:
   - Default
   - TransparentFX
