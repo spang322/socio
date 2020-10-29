@@ -10,41 +10,67 @@ public class LabelGame : MonoBehaviour
     string currentName, currentLabel;
     //Transition transition;
     [SerializeField]
+    int maxPlayers, minPlayers;
+    [SerializeField]
     InputField nameField, labelField;
     [SerializeField]
-    GameObject lastPlayerButton, nextPlayerButton;
+    Button lastPlayerButton, nextPlayerButton;
+    [SerializeField]
+    Text nextPlayerButtonText;
     SceneTransition sceneTransition;
+
     void Start()
     {
         labels = new Dictionary<string, string>();
-        lastPlayerButton.SetActive(false);
+        lastPlayerButton.gameObject.SetActive(false);
+        nextPlayerButtonText.text = "Заполните поля";
+        nextPlayerButton.interactable = false;
         DontDestroyOnLoad(gameObject);
         sceneTransition = GetComponent<SceneTransition>();
         //transition = GetComponent<Transition>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void NextPlayer()
     {
         SavePlayer();
-        if (labels.Count == 5) 
-            lastPlayerButton.SetActive(true);
-        if (labels.Count == 11)
-            nextPlayerButton.SetActive(false);
+        if (labels.Count == minPlayers - 1)
+            lastPlayerButton.gameObject.SetActive(true);
+        if (labels.Count == maxPlayers - 1)
+            nextPlayerButton.gameObject.SetActive(false);
     }
+
     public void LastPlayer()
     {
         SavePlayer();
         sceneTransition.loadScene(2);
     }
+
+    public void OnTextFieldsChanged()
+    {
+        
+        if (labels.ContainsKey(nameField.text))
+            ChangeButtons(false, "Это имя уже занято");
+        else if (labels.ContainsValue(labelField.text))
+            ChangeButtons(false, "Такой ярлык уже придумали");
+        else if (nameField.text == "" || labelField.text == "")
+            ChangeButtons(false, "Заполните поля");
+        else
+            ChangeButtons(true, "Продолжить");
+
+    }
+
+    void ChangeButtons(bool interactable, string buttonText)
+    {
+        nextPlayerButtonText.text = buttonText;
+        nextPlayerButton.interactable = interactable;
+        lastPlayerButton.interactable = interactable;
+    }
+
     void SavePlayer()
     {
         labels.Add(nameField.text, labelField.text);
         nameField.text = "";
         labelField.text = "";
     }
+
 }

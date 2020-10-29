@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Label.unity
     guid: 7aeb907e4ac3ac946b70ebf314e190e6
+  - enabled: 1
+    path: Assets/Scenes/PlayLabel.unity
+    guid: 195beda4a82907f45a5186317c95f42d
   m_configObjects: {}
