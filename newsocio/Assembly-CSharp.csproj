@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CardGenerator.cs" />
     <Compile Include="Assets\Scripts\LabelGame.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\Transition.cs" />
     <Reference Include="UnityEngine">
       <HintPath>E:/Program Files/Unity/2019.4.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

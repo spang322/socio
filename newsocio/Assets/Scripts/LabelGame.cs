@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-[RequireComponent(typeof(SceneTransition))]
+using UnityEngine.SceneManagement;
+
+//[RequireComponent(typeof(SceneTransition))]
+[RequireComponent(typeof(CardGenerator))]
 public class LabelGame : MonoBehaviour
 {
     //TODO: красивый переход
@@ -18,6 +22,13 @@ public class LabelGame : MonoBehaviour
     [SerializeField]
     Text nextPlayerButtonText;
     SceneTransition sceneTransition;
+    CardGenerator cardGenerator;
+    Timer timer;
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
     void Start()
     {
@@ -27,6 +38,7 @@ public class LabelGame : MonoBehaviour
         nextPlayerButton.interactable = false;
         DontDestroyOnLoad(gameObject);
         sceneTransition = GetComponent<SceneTransition>();
+        cardGenerator = GetComponent<CardGenerator>();
         //transition = GetComponent<Transition>();
     }
 
@@ -39,10 +51,21 @@ public class LabelGame : MonoBehaviour
             nextPlayerButton.gameObject.SetActive(false);
     }
 
+    bool generateCards = false;
     public void LastPlayer()
     {
         SavePlayer();
+        generateCards = true;
         sceneTransition.loadScene(2);
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (generateCards)
+        {
+            cardGenerator.GenerateCards(labels.Values.ToList());
+            timer = FindObjectOfType<Timer>();
+            timer.SetTimer(30*labels.Count);
+        }
     }
 
     public void OnTextFieldsChanged()
