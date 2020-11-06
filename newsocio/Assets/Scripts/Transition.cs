@@ -8,9 +8,11 @@ using UnityEngine.UI;
 public class Transition : MonoBehaviour
 {
 
+    [SerializeField]
+    float transitionSpeed;
     public void Shift(int transition)
     {
-        targetShift = new Vector3(transition,0);
+        targetShift = new Vector3(0, transition);
         isShifting = true;
     }
     Vector3 targetShift;
@@ -24,7 +26,7 @@ public class Transition : MonoBehaviour
     {
         if (isShifting)
         {
-            rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, targetShift, 0.3f);
+            rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, targetShift, transitionSpeed);
             if (Vector3.Distance(transform.position, targetShift) < 1)
             {
                 rectTransform.anchoredPosition = targetShift;

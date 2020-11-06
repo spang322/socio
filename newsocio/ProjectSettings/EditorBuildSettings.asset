@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Label.unity
     guid: 7aeb907e4ac3ac946b70ebf314e190e6
+  - enabled: 1
+    path: Assets/Scenes/PlayLabel.unity
+    guid: 195beda4a82907f45a5186317c95f42d
+  - enabled: 1
+    path: Assets/Scenes/Choice.unity
+    guid: 40aca60ddbef0084aa6fc0bc4c734309
+  - enabled: 1
+    path: Assets/Scenes/PlayChoise.unity
+    guid: 30a2bb820c264a749b55c69080de4934
   m_configObjects: {}
