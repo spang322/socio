@@ -32,9 +32,10 @@ public class CardGenerator : MonoBehaviour
     void SpawnCard(Vector2 position, string text)
     {
         GameObject card = Instantiate(cardPrefab, canvas.transform);
+        card.name = text;
         RectTransform rect = card.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(cardWidth, cardHeight);
         rect.anchoredPosition = position;
-        card.GetComponent<Text>().text = text;
+        card.GetComponentInChildren<Text>().text = text;
     }
 }

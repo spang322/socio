@@ -1229,9 +1229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardWidth: 100
-  cardHeight: 100
+  cardHeight: 50
   margin: 10
-  cardPrefab: {fileID: 8560259268987210020, guid: b756f3206c84c1e4985967998f8e592b,
+  cardPrefab: {fileID: 8723227815383668729, guid: 0560d29437333724981bd6f4b1ffb91e,
     type: 3}
 --- !u!4 &1201395726
 Transform:
